@@ -143,6 +143,63 @@ body {
   color: #333;
   font-style: normal; }
 
+/*----------------------- Oculus ------------------------*/
+.oculus__list-item {
+  background: #282828;
+  height: 300px;
+  overflow: hidden;
+  position: relative;
+  width: 33.3333%; }
+  .oculus__list-item:hover .oculus__list-img {
+    opacity: .8;
+    transform: scale(1.1, 1.1); }
+  @media screen and (max-width: 767px) {
+    .oculus__list-item {
+      width: 100%; } }
+
+.oculus__list-link {
+  display: block; }
+
+.oculus__list-img {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 300px;
+  opacity: .3;
+  text-align: center;
+  transition: transform .3s, opacity .3s;
+  width: 100%; }
+  .oculus__list-img-first {
+    background-image: url(https://scontent.oculuscdn.com/t64.5771-25/11162714_283652092025521_547216123_n.jpg/eve-valkyrie.jpg); }
+  .oculus__list-img-second {
+    background-image: url(https://scontent.oculuscdn.com/t64.5771-25/12504834_1610504179262797_1233001088_n.jpg/luckys-tale.jpg); }
+  .oculus__list-img-third {
+    background-image: url(https://scontent.oculuscdn.com/t64.5771-25/12504833_1567818890181507_64856256_n.jpg/touch.jpg); }
+
+.oculus__list-text {
+  box-sizing: border-box;
+  padding: 0 32px;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  width: 100%; }
+  .oculus__list-text h4 {
+    color: #a4a5a6;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    line-height: 16px;
+    margin: 0;
+    text-align: center;
+    text-transform: uppercase; }
+  .oculus__list-text h3 {
+    color: #fff;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 28px;
+    margin: 0;
+    text-align: center; }
+
 /*----------------------- Footer ------------------------*/
 .footer__nav-column-section ~ .footer__nav-column-section {
   padding-top: 20px; }
