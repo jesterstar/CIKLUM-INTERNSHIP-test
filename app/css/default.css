@@ -127,35 +127,107 @@ table {
 .right {
   float: right; }
 
-.clearfix {
-  clear: both;
-  display: block;
-  height: 0;
-  content: ''; }
+.clear {
+  clear: both; }
+
+.nowrap {
+  white-space: nowrap; }
+
+body {
+  font-family: "Roboto";
+  font-size: 18px;
+  line-height: 1.4446;
+  font-weight: 400;
+  letter-spacing: 0em;
+  background-color: #fff;
+  color: #333;
+  font-style: normal; }
 
 /*----------------------- Footer ------------------------*/
-.footer__wrap {
-  margin: 0 auto;
-  padding: 0 22px;
-  max-width: 980px; }
+.footer__nav-column-section ~ .footer__nav-column-section {
+  padding-top: 20px; }
 
-.footer__more-location {
-  white-space: nowrap; }
-  .footer__more-location-flag {
-    background-repeat: no-repeat;
-    background-size: 16px 16px;
-    display: inline-block;
-    width: 16px;
-    height: 16px;
-    background-image: url("http://images.apple.com/ac/flags/1/images/us/16.png");
-    padding-right: 5px;
-    background-position: left center;
-    cursor: pointer;
-    float: left;
-    margin-top: 1px; }
-
-.footer__more-legal-copyright {
-  margin-right: 26px; }
-
-.footer__more-legal-links {
-  margin-right: 26px; }
+.footer {
+  font-size: 12px;
+  line-height: 1.66667;
+  font-weight: 400;
+  letter-spacing: normal;
+  background-color: #f2f2f2;
+  color: #666;
+  min-width: 1024px;
+  overflow: hidden;
+  position: relative;
+  z-index: 1; }
+  .footer a {
+    color: #666;
+    text-decoration: none; }
+    .footer a:hover, .footer a:link, .footer a:visited, .footer a:active {
+      text-decoration: none; }
+  .footer__wrap {
+    margin: 0 auto;
+    padding: 0 22px;
+    max-width: 980px; }
+  .footer__nav {
+    padding-top: 32px; }
+    .footer__nav-column {
+      width: 20%;
+      position: relative;
+      z-index: 1;
+      min-height: 2px;
+      margin: 0;
+      padding: 0;
+      float: left; }
+      .footer__nav-column-section {
+        width: 100%;
+        position: relative;
+        z-index: 1;
+        min-height: 2px;
+        margin: 0;
+        padding: 0;
+        float: left;
+        pointer-events: none; }
+        .footer__nav-column-section-list {
+          margin-right: 20px;
+          list-style: none;
+          padding: 0; }
+        .footer__nav-column-section-item {
+          display: block;
+          pointer-events: auto; }
+        .footer__nav-column-section-title {
+          font-size: 12px;
+          line-height: 1.66667;
+          font-weight: 500;
+          letter-spacing: normal;
+          color: #333;
+          margin: 0; }
+  .footer__more {
+    color: #999;
+    padding: 20px 0 24px; }
+    .footer__more-top {
+      border-bottom: 1px solid #e3e3e3;
+      max-height: 9999px;
+      margin-bottom: 6px;
+      padding-bottom: 5px; }
+      .footer__more-top a {
+        color: #08c; }
+    .footer__more-location-flag {
+      background-repeat: no-repeat;
+      background-size: 16px 16px;
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      background-image: url("http://images.apple.com/ac/flags/1/images/us/16.png");
+      padding-right: 5px;
+      background-position: left center;
+      cursor: pointer;
+      float: left;
+      margin-top: 1px; }
+    .footer__more-legal-copyright {
+      margin-right: 26px; }
+    .footer__more-legal-links {
+      margin-right: 26px; }
+      .footer__more-legal-links a {
+        border-right: 1px solid #d6d6d6;
+        margin-right: 10px;
+        padding-right: 12px;
+        white-space: nowrap; }

@@ -1,16 +1,89 @@
 /*----------------------- Footer ------------------------*/
 
+.footer__nav-column-section ~ .footer__nav-column-section
+  padding-top: 20px
+
 .footer
+  font-size: 12px
+  line-height: 1.66667
+  font-weight: 400
+  letter-spacing: normal
+  background-color: #f2f2f2
+  color: #666
+  min-width: 1024px
+  overflow: hidden
+  position: relative
+  z-index: 1
+
+  a
+    color: #666
+    text-decoration: none
+
+    &:hover,
+    &:link,
+    &:visited,
+    &:active
+      text-decoration: none
 
   &__wrap
     margin: 0 auto
     padding: 0 22px
     max-width: 980px
 
+
+  &__nav
+    padding-top: 32px
+
+    &-column
+      width: 20%
+      position: relative
+      z-index: 1
+      min-height: 2px
+      margin: 0
+      padding: 0
+      float: left
+
+      &-section
+        width: 100%
+        position: relative
+        z-index: 1
+        min-height: 2px
+        margin: 0
+        padding: 0
+        float: left
+        pointer-events: none
+
+        &-list
+          margin-right: 20px
+          list-style: none
+          padding: 0
+
+        &-item
+          display: block
+          pointer-events: auto
+
+        &-title
+          font-size: 12px
+          line-height: 1.66667
+          font-weight: 500
+          letter-spacing: normal
+          color: #333
+          margin: 0
+
   &__more
+    color: #999
+    padding: 20px 0 24px
+
+    &-top
+      border-bottom: 1px solid #e3e3e3
+      max-height: 9999px
+      margin-bottom: 6px
+      padding-bottom: 5px
+      
+      a
+        color: #08c
 
     &-location
-      white-space: nowrap
 
       &-flag
         background-repeat: no-repeat
@@ -32,3 +105,9 @@
 
       &-links
         margin-right: 26px
+
+        a
+          border-right: 1px solid #d6d6d6
+          margin-right: 10px
+          padding-right: 12px
+          white-space: nowrap
