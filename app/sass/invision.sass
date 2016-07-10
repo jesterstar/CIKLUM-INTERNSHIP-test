@@ -6,6 +6,9 @@
   font-family: "Open Sans"
   text-align: center
 
+  @media screen and (max-width: 1115px)
+    padding: 1em 0
+
   &__wrap
     max-width: 1320px
     margin: 0 auto
@@ -15,6 +18,10 @@
       color: #fff
       font-size: 30px
       margin-bottom: 55px
+      font-weight: 400
+
+      @media screen and (max-width: 1115px)
+        margin-bottom: 1em
 
   &-terms
     font-size: 12px
@@ -39,8 +46,10 @@
       float: left
       margin: 0
       font-size: 18px
-      line-height: 1.8em
       color: #747c83
+
+      @media screen and (max-width: 1115px)
+        float: none
 
       label
         position: absolute
@@ -48,13 +57,19 @@
         left: 0
         font-size: 18px
         color: #8a959e
-        margin: 16px 50px 0 16px
+        margin: 16px 0 0 50px
         font-weight: 400
+
+        @media screen and (max-width: 1115px)
+          margin-top: 32px
 
       i
         position: absolute
-        top: 18px
+        top: 15px
         left: 15px
+
+        @media screen and (max-width: 1115px)
+          margin-top: 1em
 
       input[type=text],
       input[type=search],
@@ -63,7 +78,73 @@
         background: white
         line-height: 1em
         border-radius: 3px
-        padding: 30px 48px 18px 15px
+        padding: 18px 15px
         margin-right: 10px
         border: 1px solid #d4d7da
         width: 280px
+        font-size: 18px
+        height: 17px
+
+        @media screen and (max-width: 1355px)
+          width: 250px
+
+        @media screen and (max-width: 1255px)
+          width: 220px
+
+        @media screen and (max-width: 1115px)
+          width: 280px
+          margin-right: 0
+          margin-top: 1em
+
+  &-button
+
+    @media screen and (max-width: 1115px)
+      width: 100%
+
+    button
+      display: inline-block
+      padding: 21px 40px 19px
+      background: #ff3366
+      border: 0
+      border-radius: 5px
+      color: white
+      font-size: 15px
+      line-height: 1em
+      font-weight: 700
+      text-transform: uppercase
+      cursor: pointer
+      transition: .3s ease all
+
+      &:hover,
+      &:focus,
+      &:active
+        background-color: lighten(#ff3366, 5)
+        transition: .3s ease all
+
+      &:focus,
+      &:active
+        box-shadow: none
+
+      @media screen and (max-width: 1255px)
+        padding: 21px 10px 19px
+
+      @media screen and (max-width: 1115px)
+        margin-top: 1em
+        padding: 21px 31px 19px
+
+  &__ico
+    display: inline-block
+    vertical-align: middle
+    height: 24px
+    width: 24px
+    background-image: url('../img/sprites/sprite_invision.png')
+    background-repeat: no-repeat
+
+    &-user
+      background-position: 0 -474px
+
+    &-email
+      background-position: 0 -386px
+
+    &-lock
+      background-position: 0 -430px

@@ -153,6 +153,9 @@ body {
   padding: 160px 0 145px;
   font-family: "Open Sans";
   text-align: center; }
+  @media screen and (max-width: 1115px) {
+    .invision {
+      padding: 1em 0; } }
   .invision__wrap {
     max-width: 1320px;
     margin: 0 auto;
@@ -160,7 +163,11 @@ body {
     .invision__wrap h2 {
       color: #fff;
       font-size: 30px;
-      margin-bottom: 55px; }
+      margin-bottom: 55px;
+      font-weight: 400; }
+      @media screen and (max-width: 1115px) {
+        .invision__wrap h2 {
+          margin-bottom: 1em; } }
   .invision-terms {
     font-size: 12px;
     line-height: 1.8em;
@@ -180,20 +187,28 @@ body {
       float: left;
       margin: 0;
       font-size: 18px;
-      line-height: 1.8em;
       color: #747c83; }
+      @media screen and (max-width: 1115px) {
+        .invision form p {
+          float: none; } }
       .invision form p label {
         position: absolute;
         top: 0;
         left: 0;
         font-size: 18px;
         color: #8a959e;
-        margin: 16px 50px 0 16px;
+        margin: 16px 0 0 50px;
         font-weight: 400; }
+        @media screen and (max-width: 1115px) {
+          .invision form p label {
+            margin-top: 32px; } }
       .invision form p i {
         position: absolute;
-        top: 18px;
+        top: 15px;
         left: 15px; }
+        @media screen and (max-width: 1115px) {
+          .invision form p i {
+            margin-top: 1em; } }
       .invision form p input[type=text],
       .invision form p input[type=search],
       .invision form p input[type=email],
@@ -201,10 +216,73 @@ body {
         background: white;
         line-height: 1em;
         border-radius: 3px;
-        padding: 30px 48px 18px 15px;
+        padding: 18px 15px;
         margin-right: 10px;
         border: 1px solid #d4d7da;
-        width: 280px; }
+        width: 280px;
+        font-size: 18px;
+        height: 17px; }
+        @media screen and (max-width: 1355px) {
+          .invision form p input[type=text],
+          .invision form p input[type=search],
+          .invision form p input[type=email],
+          .invision form p input[type=password] {
+            width: 250px; } }
+        @media screen and (max-width: 1255px) {
+          .invision form p input[type=text],
+          .invision form p input[type=search],
+          .invision form p input[type=email],
+          .invision form p input[type=password] {
+            width: 220px; } }
+        @media screen and (max-width: 1115px) {
+          .invision form p input[type=text],
+          .invision form p input[type=search],
+          .invision form p input[type=email],
+          .invision form p input[type=password] {
+            width: 280px;
+            margin-right: 0;
+            margin-top: 1em; } }
+  @media screen and (max-width: 1115px) {
+    .invision-button {
+      width: 100%; } }
+  .invision-button button {
+    display: inline-block;
+    padding: 21px 40px 19px;
+    background: #ff3366;
+    border: 0;
+    border-radius: 5px;
+    color: white;
+    font-size: 15px;
+    line-height: 1em;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: .3s ease all; }
+    .invision-button button:hover, .invision-button button:focus, .invision-button button:active {
+      background-color: #ff4d79;
+      transition: .3s ease all; }
+    .invision-button button:focus, .invision-button button:active {
+      box-shadow: none; }
+    @media screen and (max-width: 1255px) {
+      .invision-button button {
+        padding: 21px 10px 19px; } }
+    @media screen and (max-width: 1115px) {
+      .invision-button button {
+        margin-top: 1em;
+        padding: 21px 31px 19px; } }
+  .invision__ico {
+    display: inline-block;
+    vertical-align: middle;
+    height: 24px;
+    width: 24px;
+    background-image: url("../img/sprites/sprite_invision.png");
+    background-repeat: no-repeat; }
+    .invision__ico-user {
+      background-position: 0 -474px; }
+    .invision__ico-email {
+      background-position: 0 -386px; }
+    .invision__ico-lock {
+      background-position: 0 -430px; }
 
 /*----------------------- Oculus ------------------------*/
 .oculus__list-item {
