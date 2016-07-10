@@ -137,6 +137,12 @@ a {
 .nowrap {
   white-space: nowrap; }
 
+.relative {
+  position: relative; }
+
+.absolute {
+  position: absolute; }
+
 body {
   font-family: "Roboto";
   font-size: 18px;
@@ -146,6 +152,136 @@ body {
   background-color: #fff;
   color: #333;
   font-style: normal; }
+
+/*----------------------- Dropbox ------------------------*/
+.dropbox {
+  background-color: #f7f7f7;
+  padding: 0;
+  overflow: hidden;
+  font-family: "Open Sans"; }
+  .dropbox__bg {
+    width: 1770px;
+    position: absolute;
+    left: 50%;
+    margin-left: -885px;
+    background-position: right center;
+    background-size: contain;
+    background-image: url("../img/dropbox/bg.jpg");
+    background-repeat: no-repeat;
+    height: 100%; }
+    @media screen and (max-width: 1201px) {
+      .dropbox__bg {
+        background-position: 650px center; } }
+    @media screen and (max-width: 910px) {
+      .dropbox__bg {
+        background-position: 760px center; } }
+    @media screen and (max-width: 767px) {
+      .dropbox__bg {
+        background-position: 800px center;
+        background-size: cover; } }
+    @media screen and (max-width: 400px) {
+      .dropbox__bg {
+        background-image: none; } }
+  .dropbox__inner {
+    margin: 0 auto;
+    text-align: left;
+    padding: 20px;
+    padding-top: 75px;
+    padding-bottom: 75px;
+    min-height: 550px;
+    max-width: 990px;
+    box-sizing: content-box;
+    z-index: 2; }
+    .dropbox__inner-content {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%); }
+      .dropbox__inner-content h1 {
+        color: #47525d;
+        margin: 0 auto;
+        margin-bottom: 20px;
+        max-width: 450px;
+        font-size: 47.25px;
+        font-weight: 100; }
+        @media screen and (max-width: 1200px) {
+          .dropbox__inner-content h1 {
+            font-size: 31px;
+            max-width: 350px; } }
+        @media screen and (max-width: 767px) {
+          .dropbox__inner-content h1 {
+            font-size: 26px; } }
+        @media screen and (max-width: 400px) {
+          .dropbox__inner-content h1 {
+            text-align: center; } }
+      .dropbox__inner-content h2 {
+        font-size: 21px;
+        font-weight: 100;
+        padding-bottom: 20px;
+        line-height: 1.5;
+        max-width: 450px;
+        color: #47525d;
+        margin: 0 auto; }
+        @media screen and (max-width: 1200px) {
+          .dropbox__inner-content h2 {
+            font-size: 16px;
+            max-width: 350px;
+            margin-right: 0;
+            margin-left: 0; } }
+        @media screen and (max-width: 400px) {
+          .dropbox__inner-content h2 {
+            text-align: center; } }
+    .dropbox__inner-btngroup {
+      float: left;
+      margin: 30px 0 0 0;
+      text-align: center;
+      background: none; }
+      @media screen and (max-width: 400px) {
+        .dropbox__inner-btngroup {
+          float: none; } }
+      .dropbox__inner-btngroup > a {
+        min-width: 0;
+        min-height: 0;
+        margin: 0;
+        padding: 19px 26px;
+        font-size: 21px;
+        line-height: 21px;
+        background: #0071e0;
+        color: #fff;
+        display: block;
+        text-align: center;
+        border: none;
+        border-radius: 6px;
+        font-weight: normal;
+        transition: .3s ease all; }
+        .dropbox__inner-btngroup > a:active, .dropbox__inner-btngroup > a:hover, .dropbox__inner-btngroup > a:focus {
+          background-color: #3398ea;
+          transition: .3s ease all; }
+        @media screen and (max-width: 1200px) {
+          .dropbox__inner-btngroup > a {
+            font-size: 16px;
+            padding: 14px 40px; } }
+        @media screen and (max-width: 400px) {
+          .dropbox__inner-btngroup > a {
+            display: inline-block; } }
+      .dropbox__inner-btngroup span {
+        text-align: left;
+        margin-top: 15px;
+        font-size: 16px;
+        color: #47525d;
+        margin-bottom: 0;
+        display: block; }
+        .dropbox__inner-btngroup span > a {
+          border-bottom: 1px solid #0071e0;
+          color: #0071e0;
+          text-decoration: none;
+          transition: .3s ease all; }
+          .dropbox__inner-btngroup span > a:hover, .dropbox__inner-btngroup span > a:active, .dropbox__inner-btngroup span > a:focus {
+            color: #3398ea;
+            border-color: #3398ea;
+            transition: .3s ease all; }
+        @media screen and (max-width: 767px) {
+          .dropbox__inner-btngroup span {
+            text-align: center; } }
 
 /*----------------------- Invision ------------------------*/
 .invision {
