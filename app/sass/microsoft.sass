@@ -1,0 +1,176 @@
+/*----------------------- Mircosoft ------------------------*/
+
+.microsoft
+  box-shadow: 0 1px 0 rgba(0,0,0,0.1)
+  font-size: 15px
+  background: #fff
+  color: #2F2F2F
+  width: 100%
+  z-index: 1000
+  font-family: "Open Sans"
+
+  &__wrap
+    width: 100%
+    max-width: 1600px
+    margin: 0 auto
+
+    @media screen and (min-width: 899px)
+      width: 90%
+
+  &__nav
+
+    a,
+    a:hover,
+    a:focus,
+    a:visited,
+    a:active
+      color: #2F2F2F
+      font-weight: normal
+      text-decoration: none
+
+    &-brand
+      float: left
+      line-height: normal
+      padding-left: 10px
+      height: 48px
+
+      @media screen and (min-width: 899px)
+        line-height: 48px
+        padding: 0
+
+      a
+        display: block
+        margin-top: 13px
+
+      img
+        display: block
+        vertical-align: baseline
+        max-height: 23px
+
+    &-menu
+      position: absolute
+      margin-top: 48px
+      right: 0
+      transition: width .3s ease-out
+      z-index: 1000
+      width: 0
+      max-width: 300px
+      height: 100%
+      height: calc(100% - 50px)
+      display: none
+
+      @media screen and (min-width: 899px)
+        margin: 0 0 0 18px
+        position: static
+        width: auto
+        height: auto
+        max-width: none
+        background-color: transparent
+        float: left
+        display: block
+
+      >ul
+        background-color: #f2f2f2
+        height: 100%
+        overflow: auto
+
+        @media screen and (min-width: 899px)
+          background-color: transparent
+          overflow: visible
+
+        >li
+          position: relative
+          float: none
+          margin: 0
+          padding: 0
+          list-style: none
+          background-color: #f2f2f2
+
+          @media screen and (min-width: 899px)
+            float: left
+            background-color: transparent
+
+          a
+            display: block
+            padding: 0 12px
+            line-height: 48px
+            transition: background-color ease-out .5s
+
+            @media screen and (min-width: 899px)
+              padding: 0 1.5em
+
+        >li.active
+          background-color: #f2f2f2
+          transition: background-color ease-out .5s
+
+  &__dropdown
+
+    &-container
+      display: none
+      position: static
+      z-index: 1000
+      top: 100%
+      left: 0
+      width: auto
+      min-height: 0
+      padding: 0
+      background-color: #e5e5e5
+      border-left: 1px solid rgba(0,0,0,0.05)
+      border-bottom: 1px solid rgba(0,0,0,0.3)
+      border-right: 1px solid rgba(0,0,0,0.1)
+
+      @media screen and (min-width: 899px)
+        position: absolute
+        width: auto
+        padding: 0 0 8px
+        background: #f2f2f2
+
+      >ul
+
+        >li.active
+          background-color: #e5e5e5
+
+    &-tab
+      transition: background-color ease-out .5s
+      width: 100%
+
+      a
+        display: block
+        min-height: 28px
+        padding: 14px 10px
+        line-height: 20px
+        color: #505050
+        white-space: nowrap
+
+        &:hover
+          text-decoration: underline
+
+        @media screen and (min-width: 899px)
+          padding: 17px 24px
+
+      &-content
+        display: none
+        position: static
+        top: 0
+        left: 202px
+        width: auto
+        border-bottom: 1px solid rgba(0,0,0,0.3)
+        border-right: 1px solid rgba(0,0,0,0.1)
+        background-color: #e5e5e5
+
+        @media screen and (min-width: 899px)
+          overflow: hidden
+          position: absolute
+          width: 300px
+          z-index: 2
+
+      &-list
+        float: none
+        width: auto
+        color: #505050
+        background-color: #d9d9d9
+
+        @media screen and (min-width: 899px)
+          background-color: #e5e5e5
+          float: left
+          width: 100%
