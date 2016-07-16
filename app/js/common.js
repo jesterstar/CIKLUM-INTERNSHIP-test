@@ -6,8 +6,8 @@
 
 $(document).ready(function() {
 
-    var ul       =  $('.microsoft__nav-menu ul'),
-        drop     =  $('.microsoft__dropdown-container');
+    var ul   =  $('.microsoft__nav-menu ul'),
+        drop =  $('.microsoft__dropdown-container');
 
     $(drop).hide();
 
@@ -29,8 +29,10 @@ $(document).ready(function() {
         });
     });
 
-    var subli     = $('.microsoft__dropdown-container ul li'),
-        cont      = $('.microsoft__dropdown-tab-content');
+    var subli = $('.microsoft__dropdown-container ul li'),
+        cont  = $('.microsoft__dropdown-tab-content'),
+        tab   = $('.microsoft__dropdown-tab'),
+        list  = $('.microsoft__dropdown-tab-list');
 
     $(subli).mouseenter('li .microsoft__dropdown-tab',function(e){
 
@@ -38,6 +40,7 @@ $(document).ready(function() {
 
         $(this).addClass('active');
         $(subli).find(cont).css("display", "block");
+        // $(subli).find(tab).hasClass('active').find(list).css("display", "block");
 
     });
 
@@ -47,6 +50,7 @@ $(document).ready(function() {
 
         $(this).removeClass('active');
         $(subli).find(cont).css("display", "none");
+        // $(subli).find(tab).hasClass('active').find(list).css("display", "none");
 
     });
 

@@ -298,12 +298,16 @@ body {
       float: none;
       width: auto;
       color: #505050;
-      background-color: #d9d9d9; }
+      background-color: #d9d9d9;
+      display: none; }
       @media screen and (min-width: 899px) {
         .microsoft__dropdown-tab-list {
           background-color: #e5e5e5;
           float: left;
           width: 100%; } }
+
+li.microsoft__dropdown-tab:hover .microsoft__dropdown-tab-list {
+  display: block; }
 
 /*----------------------- Dropbox ------------------------*/
 .dropbox {
@@ -535,6 +539,12 @@ body {
             width: 280px;
             margin-right: 0;
             margin-top: 1em; } }
+        @media screen and (max-width: 400px) {
+          .invision form p input[type=text],
+          .invision form p input[type=search],
+          .invision form p input[type=email],
+          .invision form p input[type=password] {
+            width: 230px; } }
   @media screen and (max-width: 1115px) {
     .invision-button {
       width: 100%; } }
@@ -563,6 +573,9 @@ body {
       .invision-button button {
         margin-top: 1em;
         padding: 21px 31px 19px; } }
+    @media screen and (max-width: 400px) {
+      .invision-button button {
+        padding: 21px 7px 19px; } }
   .invision__ico {
     display: inline-block;
     vertical-align: middle;
