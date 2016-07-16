@@ -1,4 +1,4 @@
-/*----------------------- Mircosoft ------------------------*/
+/*----------------------- Microsoft ------------------------*/
 
 .microsoft
   box-shadow: 0 1px 0 rgba(0,0,0,0.1)
@@ -7,7 +7,7 @@
   color: #2F2F2F
   width: 100%
   z-index: 1000
-  font-family: "Open Sans"
+  font-family: "Open Sans", sans-serif
 
   &__wrap
     width: 100%
@@ -99,11 +99,68 @@
             @media screen and (min-width: 899px)
               padding: 0 1.5em
 
+            >&:hover
+              background-color: #f2f2f2
+
         >li.active
           background-color: #f2f2f2
           transition: background-color ease-out .5s
 
+    &-toggle
+      display: block
+      float: right
+
+      @media screen and (min-width: 899px)
+        display: none
+
+      button
+        height: 48px
+        line-height: 48px
+        width: 44px
+        background: 0
+        border: 0
+        cursor: pointer
+        display: inline-block
+        padding: 0 .6em
+        color: #7f7f7f
+        transition: background-color .3s ease-out
+        font-weight: normal
+        font-size: 15px
+        font-family: "Open Sans", sans-serif
+        margin: 0
+        min-width: 0
+        border-radius: 0
+        vertical-align: inherit
+
+        &:focus,
+        &:hover
+          outline: 0
+          color: #0072C6
+          background-color: #f2f2f2
+          transition: background-color 0s
+
+        i
+          color: #afafaf
+          display: inline-block
+          width: 1em
+          height: 1em
+          vertical-align: middle
+          overflow: visible
+          font-size: 1.4em
+          position: relative
+          bottom: 2px
+          margin: 0 auto
+
   &__dropdown
+
+    &-label
+
+      a
+
+        i
+          margin-left: 6px
+          font-size: 10px
+          color: #777
 
     &-container
       display: none
@@ -140,25 +197,51 @@
         padding: 14px 10px
         line-height: 20px
         color: #505050
-        white-space: nowrap
+        min-width: 200px
 
         &:hover
-          text-decoration: underline
+          text-decoration: none
+          cursor: default
 
         @media screen and (min-width: 899px)
           padding: 17px 24px
+
+        i
+          display: block
+          width: 1em
+          height: 1em
+          font-style: normal
+          font-weight: normal
+          -webkit-font-smoothing: antialiased
+          -moz-osx-font-smoothing: grayscale
+          float: right
+          font-size: 10px
+          margin: 12px 16px
+          line-height: 34px
+
+          @media screen and (min-width: 999px)
+            margin: 7px 3px
+
+      &-link
+
+        a
+
+          &:hover
+            text-decoration: underline
+            cursor: pointer
 
       &-content
         display: none
         position: static
         top: 0
-        left: 202px
+        left: 245px
         width: auto
         border-bottom: 1px solid rgba(0,0,0,0.3)
         border-right: 1px solid rgba(0,0,0,0.1)
         background-color: #e5e5e5
+        padding-bottom: 8px
 
-        @media screen and (min-width: 899px)
+        @media screen and (min-width: 999px)
           overflow: hidden
           position: absolute
           width: 300px
@@ -170,11 +253,281 @@
         color: #505050
         background-color: #d9d9d9
         display: none
+        height: 100%
+        padding-bottom: 8px
 
-        @media screen and (min-width: 899px)
+        @media screen and (min-width: 999px)
           background-color: #e5e5e5
           float: left
           width: 100%
+
+        >li.active
+          background-color: #d9d9d9
+          transition: background-color ease-out .5s
+
+        a
+
+          &:hover
+
+            text-decoration: underline
+            cursor: pointer
+
+  &__user
+    float: right
+
+    @media screen and (max-width: 556px)
+      display: none
+
+    &-container
+      display: inline-block
+      position: relative
+      float: left
+      height: 48px
+      padding: 0 1em
+
+      &:hover
+        color: #0078d7
+        background-color: #f2f2f2
+
+    &-item
+      display: inline-block
+      cursor: pointer
+      font-size: 12px
+      border-width: 1px
+      border-style: solid
+      border-bottom-style: none
+      border-color: transparent
+      width: 100%
+      height: 48px
+      line-height: 48px
+
+  &__toggle
+    display: block
+    float: right
+
+    @media screen and (min-width: 999px)
+      display: none
+    
+    li
+      vertical-align: top
+      height: 48px
+      display: inline-block
+      transition: background-color ease-out .5s
+
+      &:hover
+        background-color: #f2f2f2
+        transition: background-color ease-out .5s
+
+      &:hover a span
+        color: #0072C6
+
+      button
+        height: 48px
+        width: 44px
+        background: 0
+        border: 0
+        cursor: pointer
+        display: inline-block
+        padding: 0 .6em
+        color: #7f7f7f
+        line-height: 48px
+        transition: background-color .3s ease-out
+        font-weight: normal
+        font-size: 15px
+        margin: 0
+        min-width: 0
+        border-radius: 0
+        vertical-align: inherit
+
+        @media screen and (min-width: 999px)
+          height: 48px
+          line-height: 48px
+          outline: 0
+          color: #0072C6
+          transition: background-color 0s
+          background-color: transparent
+
+        i
+          font-size: 1.4em
+          color: #afafaf
+          position: relative
+          bottom: 2px
+          margin: 0 auto
+          display: inline-block
+          width: 1em
+          height: 1em
+          vertical-align: middle
+          overflow: visible
+
+      a
+        margin-left: 0
+        background: 0
+        border: 0
+        cursor: pointer
+        display: inline-block
+        padding: 0 .6em
+        color: #7f7f7f
+        line-height: 48px
+        transition: background-color .3s ease-out
+
+        i
+          color: #afafaf
+          float: left
+          top: 15px
+          height: 48px
+          font-size: 1.4em
+          position: relative
+          bottom: 2px
+          margin: 0 auto
+          display: inline-block
+          width: 1em
+          vertical-align: middle
+          overflow: visible
+
+        span
+          font-size: .75em
+          float: left
+          margin-left: 3px
+
+  &__actions
+    clear: both
+    margin: 0
+    float: none
+    background-color: #f2f2f2
+
+    @media screen and (min-width: 999px)
+      float: right
+      padding: 0
+      background-color: transparent
+      clear: none
+
+    &-form
+      display: none
+      float: none
+      padding: 1.5em 10px
+      position: relative
+      text-align: center
+
+      @media screen and (min-width: 999px)
+        display: block
+        float: left
+        padding: 0 5px 0 0
+
+      &-wrap
+        margin: 0 auto
+        position: relative
+        width: 70%
+
+        @media screen and (min-width: 999px)
+          width: auto
+          padding: 7px 5px 0 0
+
+        input
+          font-weight: normal
+          font-size: 15px
+          line-height: 1.5
+          margin: 0
+          min-width: 0
+          border-radius: 0
+          vertical-align: inherit
+          float: none
+          width: 100%
+          height: 30px
+          border: 0
+          max-width: none
+          outline: 0
+          padding-right: 35px
+          -webkit-appearance: none
+
+
+          @media screen and (min-width: 999px)
+            float: left
+            width: 244px
+            height: 36px
+            padding: 0 10px
+            border: 1px solid #A9A9A9
+            border-right: 0
+
+        button
+          box-sizing: border-box
+          width: 33px
+          height: 30px
+          padding: 0
+          margin-left: -4px
+          border: 0
+          background: #0078D7
+          cursor: pointer
+          position: absolute
+          top: 0
+          right: 0
+          font-weight: normal
+          font-size: 15px
+          line-height: 1.5
+          margin: 0
+          min-width: 0
+          border-radius: 0
+          vertical-align: inherit
+
+          @media screen and (min-width: 999px)
+            background-color: transparent
+            position: static
+            border: 1px solid #A9A9A9
+            border-left: none
+            height: 36px
+
+          i
+            font-size: 1em
+            color: #fff
+            max-width: none
+            position: relative
+            top: -3px
+            display: inline-block
+            width: 1em
+            height: 1em
+            vertical-align: middle
+            overflow: visible
+
+            @media screen and (min-width: 999px)
+              font-size: 17px
+              color: #afafaf
+
+    &-cart
+      float: left
+      padding: 5px
+      display: none
+      position: relative
+      top: 2px
+
+      @media screen and (max-width: 999px)
+        display: none
+
+      &:hover
+        background-color: #f2f2f2
+
+      &:hover span
+        color: #0078D7
+
+      @media screen and (min-width: 999px)
+        display: inline-block
+        top: 0
+        padding: 0
+        text-align: center
+
+      a
+        display: inline-block
+        vertical-align: middle
+        padding: 16px 10px
+        margin-left: 6px
+
+        i
+          color: #afafaf
+          font-size: 1em
+          float: left
+
+        span
+          font-size: .75em
+          float: left
+          margin-left: 3px
 
 li.microsoft__dropdown-tab:hover .microsoft__dropdown-tab-list
   display: block

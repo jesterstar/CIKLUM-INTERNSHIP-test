@@ -142,8 +142,11 @@ a {
 .absolute {
   position: absolute; }
 
+.block {
+  display: block !important; }
+
 body {
-  font-family: "Roboto";
+  font-family: "Roboto", sans-serif;
   font-size: 18px;
   line-height: 1.4446;
   font-weight: 400;
@@ -152,7 +155,7 @@ body {
   color: #333;
   font-style: normal; }
 
-/*----------------------- Mircosoft ------------------------*/
+/*----------------------- Microsoft ------------------------*/
 .microsoft {
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
   font-size: 15px;
@@ -160,7 +163,7 @@ body {
   color: #2F2F2F;
   width: 100%;
   z-index: 1000;
-  font-family: "Open Sans"; }
+  font-family: "Open Sans", sans-serif; }
   .microsoft__wrap {
     width: 100%;
     max-width: 1600px;
@@ -240,9 +243,55 @@ body {
           @media screen and (min-width: 899px) {
             .microsoft__nav-menu > ul > li a {
               padding: 0 1.5em; } }
+          > .microsoft__nav-menu > ul > li a:hover {
+            background-color: #f2f2f2; }
       .microsoft__nav-menu > ul > li.active {
         background-color: #f2f2f2;
         transition: background-color ease-out .5s; }
+  .microsoft__nav-toggle {
+    display: block;
+    float: right; }
+    @media screen and (min-width: 899px) {
+      .microsoft__nav-toggle {
+        display: none; } }
+    .microsoft__nav-toggle button {
+      height: 48px;
+      line-height: 48px;
+      width: 44px;
+      background: 0;
+      border: 0;
+      cursor: pointer;
+      display: inline-block;
+      padding: 0 .6em;
+      color: #7f7f7f;
+      transition: background-color .3s ease-out;
+      font-weight: normal;
+      font-size: 15px;
+      font-family: "Open Sans", sans-serif;
+      margin: 0;
+      min-width: 0;
+      border-radius: 0;
+      vertical-align: inherit; }
+      .microsoft__nav-toggle button:focus, .microsoft__nav-toggle button:hover {
+        outline: 0;
+        color: #0072C6;
+        background-color: #f2f2f2;
+        transition: background-color 0s; }
+      .microsoft__nav-toggle button i {
+        color: #afafaf;
+        display: inline-block;
+        width: 1em;
+        height: 1em;
+        vertical-align: middle;
+        overflow: visible;
+        font-size: 1.4em;
+        position: relative;
+        bottom: 2px;
+        margin: 0 auto; }
+  .microsoft__dropdown-label a i {
+    margin-left: 6px;
+    font-size: 10px;
+    color: #777; }
   .microsoft__dropdown-container {
     display: none;
     position: static;
@@ -273,22 +322,42 @@ body {
       padding: 14px 10px;
       line-height: 20px;
       color: #505050;
-      white-space: nowrap; }
+      min-width: 200px; }
       .microsoft__dropdown-tab a:hover {
-        text-decoration: underline; }
+        text-decoration: none;
+        cursor: default; }
       @media screen and (min-width: 899px) {
         .microsoft__dropdown-tab a {
           padding: 17px 24px; } }
+      .microsoft__dropdown-tab a i {
+        display: block;
+        width: 1em;
+        height: 1em;
+        font-style: normal;
+        font-weight: normal;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        float: right;
+        font-size: 10px;
+        margin: 12px 16px;
+        line-height: 34px; }
+        @media screen and (min-width: 999px) {
+          .microsoft__dropdown-tab a i {
+            margin: 7px 3px; } }
+    .microsoft__dropdown-tab-link a:hover {
+      text-decoration: underline;
+      cursor: pointer; }
     .microsoft__dropdown-tab-content {
       display: none;
       position: static;
       top: 0;
-      left: 202px;
+      left: 245px;
       width: auto;
       border-bottom: 1px solid rgba(0, 0, 0, 0.3);
       border-right: 1px solid rgba(0, 0, 0, 0.1);
-      background-color: #e5e5e5; }
-      @media screen and (min-width: 899px) {
+      background-color: #e5e5e5;
+      padding-bottom: 8px; }
+      @media screen and (min-width: 999px) {
         .microsoft__dropdown-tab-content {
           overflow: hidden;
           position: absolute;
@@ -299,12 +368,251 @@ body {
       width: auto;
       color: #505050;
       background-color: #d9d9d9;
-      display: none; }
-      @media screen and (min-width: 899px) {
+      display: none;
+      height: 100%;
+      padding-bottom: 8px; }
+      @media screen and (min-width: 999px) {
         .microsoft__dropdown-tab-list {
           background-color: #e5e5e5;
           float: left;
           width: 100%; } }
+      .microsoft__dropdown-tab-list > li.active {
+        background-color: #d9d9d9;
+        transition: background-color ease-out .5s; }
+      .microsoft__dropdown-tab-list a:hover {
+        text-decoration: underline;
+        cursor: pointer; }
+  .microsoft__user {
+    float: right; }
+    @media screen and (max-width: 556px) {
+      .microsoft__user {
+        display: none; } }
+    .microsoft__user-container {
+      display: inline-block;
+      position: relative;
+      float: left;
+      height: 48px;
+      padding: 0 1em; }
+      .microsoft__user-container:hover {
+        color: #0078d7;
+        background-color: #f2f2f2; }
+    .microsoft__user-item {
+      display: inline-block;
+      cursor: pointer;
+      font-size: 12px;
+      border-width: 1px;
+      border-style: solid;
+      border-bottom-style: none;
+      border-color: transparent;
+      width: 100%;
+      height: 48px;
+      line-height: 48px; }
+  .microsoft__toggle {
+    display: block;
+    float: right; }
+    @media screen and (min-width: 999px) {
+      .microsoft__toggle {
+        display: none; } }
+    .microsoft__toggle li {
+      vertical-align: top;
+      height: 48px;
+      display: inline-block;
+      transition: background-color ease-out .5s; }
+      .microsoft__toggle li:hover {
+        background-color: #f2f2f2;
+        transition: background-color ease-out .5s; }
+      .microsoft__toggle li:hover a span {
+        color: #0072C6; }
+      .microsoft__toggle li button {
+        height: 48px;
+        width: 44px;
+        background: 0;
+        border: 0;
+        cursor: pointer;
+        display: inline-block;
+        padding: 0 .6em;
+        color: #7f7f7f;
+        line-height: 48px;
+        transition: background-color .3s ease-out;
+        font-weight: normal;
+        font-size: 15px;
+        margin: 0;
+        min-width: 0;
+        border-radius: 0;
+        vertical-align: inherit; }
+        @media screen and (min-width: 999px) {
+          .microsoft__toggle li button {
+            height: 48px;
+            line-height: 48px;
+            outline: 0;
+            color: #0072C6;
+            transition: background-color 0s;
+            background-color: transparent; } }
+        .microsoft__toggle li button i {
+          font-size: 1.4em;
+          color: #afafaf;
+          position: relative;
+          bottom: 2px;
+          margin: 0 auto;
+          display: inline-block;
+          width: 1em;
+          height: 1em;
+          vertical-align: middle;
+          overflow: visible; }
+      .microsoft__toggle li a {
+        margin-left: 0;
+        background: 0;
+        border: 0;
+        cursor: pointer;
+        display: inline-block;
+        padding: 0 .6em;
+        color: #7f7f7f;
+        line-height: 48px;
+        transition: background-color .3s ease-out; }
+        .microsoft__toggle li a i {
+          color: #afafaf;
+          float: left;
+          top: 15px;
+          height: 48px;
+          font-size: 1.4em;
+          position: relative;
+          bottom: 2px;
+          margin: 0 auto;
+          display: inline-block;
+          width: 1em;
+          vertical-align: middle;
+          overflow: visible; }
+        .microsoft__toggle li a span {
+          font-size: .75em;
+          float: left;
+          margin-left: 3px; }
+  .microsoft__actions {
+    clear: both;
+    margin: 0;
+    float: none;
+    background-color: #f2f2f2; }
+    @media screen and (min-width: 999px) {
+      .microsoft__actions {
+        float: right;
+        padding: 0;
+        background-color: transparent;
+        clear: none; } }
+    .microsoft__actions-form {
+      display: none;
+      float: none;
+      padding: 1.5em 10px;
+      position: relative;
+      text-align: center; }
+      @media screen and (min-width: 999px) {
+        .microsoft__actions-form {
+          display: block;
+          float: left;
+          padding: 0 5px 0 0; } }
+      .microsoft__actions-form-wrap {
+        margin: 0 auto;
+        position: relative;
+        width: 70%; }
+        @media screen and (min-width: 999px) {
+          .microsoft__actions-form-wrap {
+            width: auto;
+            padding: 7px 5px 0 0; } }
+        .microsoft__actions-form-wrap input {
+          font-weight: normal;
+          font-size: 15px;
+          line-height: 1.5;
+          margin: 0;
+          min-width: 0;
+          border-radius: 0;
+          vertical-align: inherit;
+          float: none;
+          width: 100%;
+          height: 30px;
+          border: 0;
+          max-width: none;
+          outline: 0;
+          padding-right: 35px;
+          -webkit-appearance: none; }
+          @media screen and (min-width: 999px) {
+            .microsoft__actions-form-wrap input {
+              float: left;
+              width: 244px;
+              height: 36px;
+              padding: 0 10px;
+              border: 1px solid #A9A9A9;
+              border-right: 0; } }
+        .microsoft__actions-form-wrap button {
+          box-sizing: border-box;
+          width: 33px;
+          height: 30px;
+          padding: 0;
+          margin-left: -4px;
+          border: 0;
+          background: #0078D7;
+          cursor: pointer;
+          position: absolute;
+          top: 0;
+          right: 0;
+          font-weight: normal;
+          font-size: 15px;
+          line-height: 1.5;
+          margin: 0;
+          min-width: 0;
+          border-radius: 0;
+          vertical-align: inherit; }
+          @media screen and (min-width: 999px) {
+            .microsoft__actions-form-wrap button {
+              background-color: transparent;
+              position: static;
+              border: 1px solid #A9A9A9;
+              border-left: none;
+              height: 36px; } }
+          .microsoft__actions-form-wrap button i {
+            font-size: 1em;
+            color: #fff;
+            max-width: none;
+            position: relative;
+            top: -3px;
+            display: inline-block;
+            width: 1em;
+            height: 1em;
+            vertical-align: middle;
+            overflow: visible; }
+            @media screen and (min-width: 999px) {
+              .microsoft__actions-form-wrap button i {
+                font-size: 17px;
+                color: #afafaf; } }
+    .microsoft__actions-cart {
+      float: left;
+      padding: 5px;
+      display: none;
+      position: relative;
+      top: 2px; }
+      @media screen and (max-width: 999px) {
+        .microsoft__actions-cart {
+          display: none; } }
+      .microsoft__actions-cart:hover {
+        background-color: #f2f2f2; }
+      .microsoft__actions-cart:hover span {
+        color: #0078D7; }
+      @media screen and (min-width: 999px) {
+        .microsoft__actions-cart {
+          display: inline-block;
+          top: 0;
+          padding: 0;
+          text-align: center; } }
+      .microsoft__actions-cart a {
+        display: inline-block;
+        vertical-align: middle;
+        padding: 16px 10px;
+        margin-left: 6px; }
+        .microsoft__actions-cart a i {
+          color: #afafaf;
+          font-size: 1em;
+          float: left; }
+        .microsoft__actions-cart a span {
+          font-size: .75em;
+          float: left;
+          margin-left: 3px; }
 
 li.microsoft__dropdown-tab:hover .microsoft__dropdown-tab-list {
   display: block; }
@@ -314,7 +622,7 @@ li.microsoft__dropdown-tab:hover .microsoft__dropdown-tab-list {
   background-color: #f7f7f7;
   padding: 0;
   overflow: hidden;
-  font-family: "Open Sans"; }
+  font-family: "Open Sans", sans-serif; }
   .dropbox__bg {
     width: 1770px;
     position: absolute;
@@ -448,7 +756,7 @@ li.microsoft__dropdown-tab:hover .microsoft__dropdown-tab-list {
 .invision {
   background: #323a45;
   padding: 160px 0 145px;
-  font-family: "Open Sans";
+  font-family: "Open Sans", sans-serif;
   text-align: center; }
   @media screen and (max-width: 1115px) {
     .invision {
