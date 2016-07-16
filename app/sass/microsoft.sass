@@ -14,7 +14,7 @@
     max-width: 1600px
     margin: 0 auto
 
-    @media screen and (min-width: 899px)
+    @media screen and (min-width: 999px)
       width: 90%
 
   &__nav
@@ -34,7 +34,7 @@
       padding-left: 10px
       height: 48px
 
-      @media screen and (min-width: 899px)
+      @media screen and (min-width: 999px)
         line-height: 48px
         padding: 0
 
@@ -46,6 +46,15 @@
         display: block
         vertical-align: baseline
         max-height: 23px
+
+    &-menu.opened
+      width: 80%
+      height: calc(100% - 48px)
+      display: block
+
+      @media screen and (max-width: 540px)
+        width: 100%
+        max-width: none
 
     &-menu
       position: absolute
@@ -59,7 +68,7 @@
       height: calc(100% - 50px)
       display: none
 
-      @media screen and (min-width: 899px)
+      @media screen and (min-width: 999px)
         margin: 0 0 0 18px
         position: static
         width: auto
@@ -74,7 +83,7 @@
         height: 100%
         overflow: auto
 
-        @media screen and (min-width: 899px)
+        @media screen and (min-width: 999px)
           background-color: transparent
           overflow: visible
 
@@ -86,7 +95,7 @@
           list-style: none
           background-color: #f2f2f2
 
-          @media screen and (min-width: 899px)
+          @media screen and (min-width: 999px)
             float: left
             background-color: transparent
 
@@ -96,21 +105,27 @@
             line-height: 48px
             transition: background-color ease-out .5s
 
-            @media screen and (min-width: 899px)
+            @media screen and (min-width: 999px)
               padding: 0 1.5em
 
             >&:hover
               background-color: #f2f2f2
 
+              @media screen and (max-width: 999px)
+                background-color: #e5e5e5
+
         >li.active
           background-color: #f2f2f2
           transition: background-color ease-out .5s
+
+    .opened
+      background-color: #f2f2f2
 
     &-toggle
       display: block
       float: right
 
-      @media screen and (min-width: 899px)
+      @media screen and (min-width: 999px)
         display: none
 
       button
@@ -132,7 +147,9 @@
         border-radius: 0
         vertical-align: inherit
 
-        &:focus,
+        &:focus
+          background-color: #e5e5e5
+
         &:hover
           outline: 0
           color: #0072C6
@@ -154,6 +171,15 @@
   &__dropdown
 
     &-label
+      transition: background-color ease-out .5s
+
+      &:hover
+        background-color: #f2f2f2
+        transition: background-color ease-out .5s
+
+        @media screen and (max-width: 999px)
+          background: #e5e5e5
+          transition: background-color ease-out .5s
 
       a
 
@@ -176,7 +202,7 @@
       border-bottom: 1px solid rgba(0,0,0,0.3)
       border-right: 1px solid rgba(0,0,0,0.1)
 
-      @media screen and (min-width: 899px)
+      @media screen and (min-width: 999px)
         position: absolute
         width: auto
         padding: 0 0 8px
@@ -198,12 +224,16 @@
         line-height: 20px
         color: #505050
         min-width: 200px
+        
+        @media screen and (max-width: 999px)
+          &:hover
+            background-color: #d9d9d9
 
         &:hover
           text-decoration: none
           cursor: default
 
-        @media screen and (min-width: 899px)
+        @media screen and (min-width: 999px)
           padding: 17px 24px
 
         i
@@ -240,6 +270,9 @@
         border-right: 1px solid rgba(0,0,0,0.1)
         background-color: #e5e5e5
         padding-bottom: 8px
+
+        @media screen and (max-width: 999px)
+          border: 0
 
         @media screen and (min-width: 999px)
           overflow: hidden
@@ -529,5 +562,10 @@
           float: left
           margin-left: 3px
 
-li.microsoft__dropdown-tab:hover .microsoft__dropdown-tab-list
+li.microsoft__dropdown-tab.active:hover .microsoft__dropdown-tab-list
   display: block
+
+li.microsoft__dropdown-tab.active .microsoft__dropdown-tab-list
+
+  @media screen and (max-width: 999px)
+    display: block
