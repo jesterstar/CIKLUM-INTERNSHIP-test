@@ -832,8 +832,12 @@ li.microsoft__dropdown-tab.active:hover .microsoft__dropdown-tab-list {
     .invision__wrap #signup_form .focus,
     .invision__wrap #signup_form .label {
       transition: .3s ease all; }
+    .invision__wrap #signup_form .focus {
+      display: inline !important;
+      color: #000 !important; }
     .invision__wrap #signup_form i {
-      opacity: 1 !important; }
+      opacity: 1 !important;
+      display: block !important; }
   .invision-terms {
     font-size: 12px;
     line-height: 1.8em;
@@ -885,7 +889,7 @@ li.microsoft__dropdown-tab.active:hover .microsoft__dropdown-tab-list {
         padding-left: 50px;
         margin-right: 10px;
         border: 1px solid #d4d7da;
-        width: 280px;
+        width: 250px;
         font-size: 18px;
         height: 53px; }
         .invision form p input[type=text]:focus,
@@ -898,13 +902,13 @@ li.microsoft__dropdown-tab.active:hover .microsoft__dropdown-tab-list {
           .invision form p input[type=search],
           .invision form p input[type=email],
           .invision form p input[type=password] {
-            width: 250px; } }
+            width: 240px; } }
         @media screen and (max-width: 1255px) {
           .invision form p input[type=text],
           .invision form p input[type=search],
           .invision form p input[type=email],
           .invision form p input[type=password] {
-            width: 220px; } }
+            width: 200px; } }
         @media screen and (max-width: 1115px) {
           .invision form p input[type=text],
           .invision form p input[type=search],
@@ -918,13 +922,13 @@ li.microsoft__dropdown-tab.active:hover .microsoft__dropdown-tab-list {
           .invision form p input[type=search],
           .invision form p input[type=email],
           .invision form p input[type=password] {
-            width: 230px; } }
+            width: 200px; } }
   @media screen and (max-width: 1115px) {
     .invision-button {
       width: 100%; } }
   .invision-button button {
     display: inline-block;
-    padding: 21px 40px 19px;
+    padding: 21px 20px;
     background: #ff3366;
     border: 0;
     border-radius: 5px;
@@ -942,14 +946,15 @@ li.microsoft__dropdown-tab.active:hover .microsoft__dropdown-tab-list {
       box-shadow: none; }
     @media screen and (max-width: 1255px) {
       .invision-button button {
-        padding: 21px 10px 19px; } }
+        padding: 21px 10px; } }
     @media screen and (max-width: 1115px) {
       .invision-button button {
         margin-top: 1em;
-        padding: 21px 42px 19px; } }
+        padding: 21px 42px; } }
     @media screen and (max-width: 400px) {
       .invision-button button {
-        padding: 21px 16px 19px; } }
+        padding: 21px 16px;
+        font-size: 13px; } }
   .invision__ico {
     display: inline-block;
     vertical-align: middle;

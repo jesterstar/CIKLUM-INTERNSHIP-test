@@ -129,7 +129,8 @@ $(document).ready(function() {
 
         e.preventDefault();
 
-
+        $(formInv).find(input).siblings().css("display", "block");
+        $(this).addClass('focus').siblings().css("display", "none");
     });
 
 });

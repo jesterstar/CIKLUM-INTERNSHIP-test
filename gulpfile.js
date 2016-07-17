@@ -23,8 +23,7 @@ gulp.task('sass', function(){
 //
 gulp.task('scripts', function(){
     return gulp.src([
-        'app/libs/iquery/dist/jquery.min.js',
-        'app/libs/magnific-popup/dist/jquery.magnific-popup.min.js',
+        'app/js/common.js'
     ])
         .pipe(concat('libs.min.js'))
         .pipe(uglify())
