@@ -315,10 +315,18 @@ body {
         .microsoft__dropdown-label:hover {
           background: #e5e5e5;
           transition: background-color ease-out .5s; } }
+    @media screen and (max-width: 999px) {
+      .microsoft__dropdown-label a {
+        position: relative; } }
     .microsoft__dropdown-label a i {
       margin-left: 6px;
       font-size: 10px;
       color: #777; }
+      @media screen and (max-width: 999px) {
+        .microsoft__dropdown-label a i {
+          position: absolute;
+          right: 30px;
+          line-height: 48px; } }
   .microsoft__dropdown-container {
     display: none;
     position: static;
@@ -371,6 +379,11 @@ body {
         font-size: 10px;
         margin: 12px 16px;
         line-height: 34px; }
+        @media screen and (max-width: 999px) {
+          .microsoft__dropdown-tab a i {
+            transform: rotate(90deg);
+            line-height: 9px;
+            margin-top: 20px; } }
         @media screen and (min-width: 999px) {
           .microsoft__dropdown-tab a i {
             margin: 7px 3px; } }
@@ -389,7 +402,7 @@ body {
       padding-bottom: 8px; }
       @media screen and (max-width: 999px) {
         .microsoft__dropdown-tab-content {
-          border: 0; } }
+          padding-bottom: 0; } }
       @media screen and (min-width: 999px) {
         .microsoft__dropdown-tab-content {
           overflow: hidden;
@@ -404,6 +417,9 @@ body {
       display: none;
       height: 100%;
       padding-bottom: 8px; }
+      @media screen and (max-width: 999px) {
+        .microsoft__dropdown-tab-list {
+          padding-bottom: 0; } }
       @media screen and (min-width: 999px) {
         .microsoft__dropdown-tab-list {
           background-color: #e5e5e5;
@@ -415,6 +431,9 @@ body {
       .microsoft__dropdown-tab-list a:hover {
         text-decoration: underline;
         cursor: pointer; }
+      @media screen and (max-width: 999px) {
+        .microsoft__dropdown-tab-list a:hover {
+          background-color: #cccccc; } }
   .microsoft__user {
     float: right; }
     @media screen and (max-width: 556px) {
@@ -810,6 +829,11 @@ li.microsoft__dropdown-tab.active:hover .microsoft__dropdown-tab-list {
       @media screen and (max-width: 1115px) {
         .invision__wrap h2 {
           margin-bottom: 1em; } }
+    .invision__wrap #signup_form .focus,
+    .invision__wrap #signup_form .label {
+      transition: .3s ease all; }
+    .invision__wrap #signup_form i {
+      opacity: 1 !important; }
   .invision-terms {
     font-size: 12px;
     line-height: 1.8em;
@@ -858,12 +882,17 @@ li.microsoft__dropdown-tab.active:hover .microsoft__dropdown-tab-list {
         background: white;
         line-height: 1em;
         border-radius: 3px;
-        padding: 18px 15px;
+        padding-left: 50px;
         margin-right: 10px;
         border: 1px solid #d4d7da;
         width: 280px;
         font-size: 18px;
-        height: 17px; }
+        height: 53px; }
+        .invision form p input[type=text]:focus,
+        .invision form p input[type=search]:focus,
+        .invision form p input[type=email]:focus,
+        .invision form p input[type=password]:focus {
+          outline: 0; }
         @media screen and (max-width: 1355px) {
           .invision form p input[type=text],
           .invision form p input[type=search],
@@ -917,10 +946,10 @@ li.microsoft__dropdown-tab.active:hover .microsoft__dropdown-tab-list {
     @media screen and (max-width: 1115px) {
       .invision-button button {
         margin-top: 1em;
-        padding: 21px 31px 19px; } }
+        padding: 21px 42px 19px; } }
     @media screen and (max-width: 400px) {
       .invision-button button {
-        padding: 21px 7px 19px; } }
+        padding: 21px 16px 19px; } }
   .invision__ico {
     display: inline-block;
     vertical-align: middle;

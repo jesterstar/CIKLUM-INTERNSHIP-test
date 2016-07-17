@@ -2,9 +2,9 @@
  * Created by Sergey on 14.06.2016.
  */
 
-// Microsoft
-
 $(document).ready(function() {
+
+    // Microsoft
 
     var ul     =   $('.microsoft__nav-menu ul'),
         drop   =   $('.microsoft__dropdown-container');
@@ -44,11 +44,9 @@ $(document).ready(function() {
         });
     });
 
-    $(cont).hide();
-
     $(function() {
 
-        $(subli).click('li.microsoft__dropdown-tab', function(e){
+        $(subli).click(function(e){
 
             e.preventDefault();
 
@@ -59,11 +57,13 @@ $(document).ready(function() {
                     return;
                 }
 
-                $(subli).find('li.active').removeClass('active').find(cont).slideUp(150);
-                $(this).addClass('active').find(cont).css("display","block").slideDown(150);
+                $(subli).removeClass('active');
+                $(cont).slideUp(150);
+
+                $(this).addClass('active');
+                $(this).children(cont).slideDown(150);
             }
         });
-
     });
 
     $(subli).mouseover('li .microsoft__dropdown-tab',function(e){
@@ -110,4 +110,26 @@ $(document).ready(function() {
         $(menu).toggleClass('opened');
         $(html).toggleClass('hidden');
     });
+
+    // Invision
+
+    var formInv = $('#signup_form'),
+        input   = $('.input'),
+        label   = $('.label');
+
+    $(formInv).on('click','input',function(e){
+
+        e.preventDefault();
+
+        $(formInv).find(input).removeClass('focus').siblings().css("opacity", "1");
+        $(this).addClass('focus').siblings().css("opacity", "0.5");
+    });
+
+    $(formInv).on('keydown','input',function(e){
+
+        e.preventDefault();
+
+
+    });
+
 });

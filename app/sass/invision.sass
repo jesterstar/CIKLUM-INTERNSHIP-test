@@ -23,6 +23,15 @@
       @media screen and (max-width: 1115px)
         margin-bottom: 1em
 
+    #signup_form
+
+      .focus,
+      .label
+        transition: .3s ease all
+
+      i
+        opacity: 1!important
+
   &-terms
     font-size: 12px
     line-height: 1.8em
@@ -78,12 +87,15 @@
         background: white
         line-height: 1em
         border-radius: 3px
-        padding: 18px 15px
+        padding-left: 50px
         margin-right: 10px
         border: 1px solid #d4d7da
         width: 280px
         font-size: 18px
-        height: 17px
+        height: 53px
+
+        &:focus
+          outline: 0
 
         @media screen and (max-width: 1355px)
           width: 250px
@@ -133,10 +145,10 @@
 
       @media screen and (max-width: 1115px)
         margin-top: 1em
-        padding: 21px 31px 19px
+        padding: 21px 42px 19px
 
       @media screen and (max-width: 400px)
-        padding: 21px 7px 19px
+        padding: 21px 16px 19px
 
   &__ico
     display: inline-block
